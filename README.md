@@ -15,7 +15,7 @@ A web application built using Express.js, MongoDB, and EJS for dynamic content r
 
 1. Clone the repository.
     ```bash
-    git clone https://github.com/your-username/your-project.git
+    git clone https://github.com/developersajidxyz/your-project.git
     ```
 
 2. Install dependencies.
