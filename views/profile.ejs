@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pinterest - Profile</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="/stylesheets/profile.css">
+</head>
+
+<body>
+  <div class="container">
+    <a href="/feed" class="button">Feed</a>
+    <div class="card">
+      <div class="profile-picture">
+        <img src="https://scontent.fspd5-1.fna.fbcdn.net/v/t39.30808-6/404657284_817297186836314_7080279752485092679_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=efb6e6&_nc_eui2=AeFYxE3dNWmn1oUtzXnuaalmi8BmoQNn_46LwGahA2f_jvcYCAEzFtpYifxXlHVxrRcVwsAeWfQXl1RcSdB3faLI&_nc_ohc=Iis5ni4TVMkAX_U59CC&_nc_ht=scontent.fspd5-1.fna&oh=00_AfB8ZHEYP7d5_-NVyQcVeQAWvMCnuXghfRs3QNj-iFWlmg&oe=657D858D" alt="sajid">
+
+      </div>
+      <h2 class="name">Sajid Hasan</h2>
+      <h3 class="username">@sajidhasan</h3>
+      <p class="description">Full Stack Web Developer (MERN)</p>
+      <a href="/logout" class="button">Logout</a>
+      <form action="/upload" method="POST" enctype="multipart/form-data">
+        <input type="text" name="filecaption" placeholder="some caption">
+        <input type="file" name="file">
+        <input type="submit">
+      </form>
+    </div>
+</div>
+    <div class="container">
+      <div class="cards ">
+        <% user.posts.forEach((post)=>{ %>
+          <div class="post-card mx-4" style="width: 18rem;">
+            <img class="card-img-top overflow-hidden aspect-ratio-1x1" src="/images/uploads/<%=post.image %>" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title"><%=post.imageText%></h5>
+            </div>
+          </div>
+        <% })%>
+      </div>
+    </div>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
